@@ -4,5 +4,5 @@
 "   Author: Ellen Gummesson
 "  License: Vim
 
-" Set .otl as the default file extension
+" Set .otl and .oln as the default file extensions
 au BufNewFile,BufRead *{otl,oln} set filetype=voutliner
