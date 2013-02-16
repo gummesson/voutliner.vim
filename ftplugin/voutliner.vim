@@ -5,9 +5,9 @@
 "  License: Vim
 
 " ~ Indentation
-setlocal shiftwidth=4
-setlocal tabstop=4
-setlocal softtabstop=4
+setlocal shiftwidth=2
+setlocal tabstop=2
+setlocal softtabstop=2
 
 setlocal autoindent   " Enable auto indent
 setlocal smartindent  " Enable context-sensitive indentation
@@ -25,6 +25,7 @@ setlocal formatoptions+=cqt  " Automatic hard wrapping
 setlocal foldmethod=expr
 setlocal foldexpr=VOFolding()
 setlocal foldtext=VOFoldingText()
+setlocal foldlevel=1
 
 function! VOFolding()
   let line = getline(v:lnum)

@@ -18,15 +18,15 @@ if !exists("main_syntax")
 endif
 
 " Regex matches
-syntax match L1 /\v^.*$/
-syntax match L2 /\v^(\t|\s{4}).*$/
-syntax match L3 /\v^(\t{2}|\s{8}).*$/
-syntax match L4 /\v^(\t{3}|\s{12}).*$/
-syntax match L5 /\v^(\t{4}|\s{16}).*$/
-syntax match L6 /\v^(\t{5}|\s{20}).*$/
-syntax match L7 /\v^(\t{6}|\s{24}).*$/
-syntax match L8 /\v^(\t{7}|\s{28}).*$/
-syntax match L9 /\v^(\t{8}|\s{32}).*$/
+syntax match L1 /\v^(.*):$/
+syntax match L2 /\v^(\t|\s{2})(-|\s+).*$/
+syntax match L3 /\v^(\t{2}|\s{4})(-|\s+).*$/
+syntax match L4 /\v^(\t{3}|\s{6})(-|\s+).*$/
+syntax match L5 /\v^(\t{4}|\s{8})(-|\s+).*$/
+syntax match L6 /\v^(\t{5}|\s{10})(-|\s+).*$/
+syntax match L7 /\v^(\t{6}|\s{12})(-|\s+).*$/
+syntax match L8 /\v^(\t{7}|\s{14})(-|\s+).*$/
+syntax match L9 /\v^(\t{8}|\s{16})(-|\s+).*$/
 syntax match Co /\v\s+(\/{2}).*$/
 
 " Link syntax matches to highlighting
