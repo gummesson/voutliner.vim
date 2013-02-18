@@ -22,16 +22,17 @@ setlocal linebreak           " Break whole words
 setlocal formatoptions+=cqt  " Automatic hard wrapping
 
 " ~ Folding
-setlocal foldmethod=expr
-setlocal foldexpr=VOFolding()
+setlocal foldmethod=expr           " Use a custom expression
+setlocal foldexpr=VOFolding()      
 setlocal foldtext=VOFoldingText()
-setlocal foldlevel=1
+setlocal foldlevel=1               " Keep the folds open by default
+setlocal foldcolumn=1              " Add a small fold column to the left
 
 function! VOFolding()
   let line = getline(v:lnum)
-  if match(line, "^\s*$") >= 0
+  if match(line, "^\s*$") >= 0      " Empty lines
     return ">0"
-  elseif match(line, "^.*:$") >= 0
+  elseif match(line, "^.*:$") >= 0  " First level 'headings'
     return ">1"
   else
     return "="

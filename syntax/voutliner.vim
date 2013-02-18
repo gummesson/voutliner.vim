@@ -29,7 +29,7 @@ syntax match L8 /\v^(\t{7}|\s{14})(-|\s+).*$/
 syntax match L9 /\v^(\t{8}|\s{16})(-|\s+).*$/
 syntax match Co /\v\s+(\/{2}).*$/
 
-" Link syntax matches to highlighting
+" Link syntax matches to the default syntax highlighting
 hi def link L1  PreProc
 hi def link L2  Statement
 hi def link L3  Type
